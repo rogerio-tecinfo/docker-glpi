@@ -1,9 +1,7 @@
 version: "3.2"
-
 #GLPI Container
-
   glpi:
-    image: rsprazeres/glpi
+    image: rsprazeres/glpi:v1
     container_name : glpi
     hostname: glpi
     ports:
