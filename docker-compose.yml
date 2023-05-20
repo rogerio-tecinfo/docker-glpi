@@ -1,0 +1,17 @@
+version: "3.2"
+
+#GLPI Container
+
+  glpi:
+    image: rsprazeres/glpi
+    container_name : glpi
+    hostname: glpi
+    ports:
+      - "80:80"
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /home/site/wwwroot/glpi/:/home/site/wwwroot/glpi
+    environment:
+      - TIMEZONE=Cayene/Fortaleza
+    restart: always
